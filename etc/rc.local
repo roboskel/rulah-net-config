@@ -3,8 +3,10 @@
 # /etc/rc.local
 
 # Default policy to drop all incoming packets.
-iptables -P INPUT DROP
-iptables -P FORWARD DROP
+# Commenting out those two lines, enables clients 
+# in the WAN to discover Rulah's PC.
+# iptables -P INPUT DROP
+# iptables -P FORWARD DROP
 
 # Accept incoming packets from localhost and the LAN interface.
 iptables -A INPUT -i lo -j ACCEPT
